@@ -1,0 +1,22 @@
+dateModified: 1674064204
+email:
+  fromEmail: admin@lagoon.local
+  fromName: 'Demo Craft Simple'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    80db1341-a43d-45f2-b6c2-f32f5e4fc2bd: 'Demo Craft Simple'
+    330d30f6-603e-45fa-af32-a37a117f57a2: Common
+    d215253a-7d67-4b10-a621-e0cd6fbc1ce3: 'Demo Craft Simple'
+system:
+  edition: solo
+  live: true
+  name: 'Demo Craft Simple'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

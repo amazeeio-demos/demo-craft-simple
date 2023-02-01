@@ -18,3 +18,6 @@ In the container running BASH
 Locally again
 - docker-compose up
 - browse to http://demo-craft-simple.docker.amazee.io
+
+## Deploy to Lagoon
+-- TODO 

@@ -28,6 +28,8 @@ volumes:
 services:
 
   cli: # cli container, will be used for executing composer and any local commands (composer, yarn, etc.)
+    env_file:
+      - .env.local 
     build:
       context: .
       dockerfile: lagoon/cli.dockerfile
@@ -46,6 +48,8 @@ services:
       << : *default-environment # loads the defined environment variables from the top
 
   nginx:
+    env_file:
+      - .env.local 
     build:
       context: .
       dockerfile: lagoon/nginx.dockerfile
@@ -67,6 +71,8 @@ services:
       - default
 
   php:
+    env_file:
+      - .env.local 
     build:
       context: .
       dockerfile: lagoon/php.dockerfile

@@ -57,3 +57,11 @@ fi
 echo DEV_MODE: $DEV_MODE
 echo DISALLOW_ROBOTS: $DISALLOW_ROBOTS
 echo ALLOW_ADMIN_CHANGES: $ALLOW_ADMIN_CHANGES
+
+if [ ! -d "/app/storage/cpresources" ]; then
+	echo Creating /app/storage/cpresources
+	mkdir /app/storage/cpresources
+	chmod 777 /app/storage/cpresources
+else
+	echo Found /app/storage/cpresources
+fi

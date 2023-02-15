@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "----------------- CURRENT ENV ---------------"
+export 
+echo "----------------- END CURRENT ENV ---------------"
+
 # The environment variable
 export CRAFT_ENVIRONMENT=${LAGOON_ENVIRONMENT:-local}
 
@@ -23,3 +27,7 @@ else
 	export ALLOW_ADMIN_CHANGES=true
 	export DISALLOW_ROBOTS=true
 fi
+
+echo "----------------- CONFIGURED ENV ---------------"
+export 
+echo "----------------- END CONFIGURED ENV ---------------"

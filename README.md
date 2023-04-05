@@ -8,6 +8,7 @@ We assume you have Pygmy running locally - see https://github.com/pygmystack/pyg
 ### Build and run locally
 - Ensure Pygmy is running (pygmy up)
 - git clone git@github.com:amazeeio-demos/demo-craft-simple.git
+- cp .env.local.example .env.local
 - docker-compose build
 - docker-compose run cli bash
 

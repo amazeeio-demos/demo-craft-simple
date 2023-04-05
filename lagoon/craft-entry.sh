@@ -38,10 +38,11 @@ echo CRAFT_DB_USER: $CRAFT_DB_USER
 
 if [ ! -z "$MARIADB_HOST" ]; then
 	export CRAFT_DB_PASSWORD=$MARIADB_PASSWORD
+	echo CRAFT_DB_PASSWORD: ******
 else
 	export CRAFT_DB_PASSWORD=lagoon
+	echo CRAFT_DB_PASSWORD: $CRAFT_DB_PASSWORD
 fi
-echo CRAFT_DB_PASSWORD: $CRAFT_DB_PASSWORD
 
 # General settings (see config/general.php)
 if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then

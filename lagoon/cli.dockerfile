@@ -12,7 +12,7 @@ COPY . /app
 # RUN mkdir -p -v -m775 /app/web/sites/default/files
 
 # Craft Entrypoint for required variables
-COPY /lagoon/craft-entry.sh /lagoon/entrypoints/99-craft-entrypoint
+COPY /lagoon/craft-entry.sh /lagoon/entrypoints/99-craft-entrypoint.sh
 
 RUN rm -rf /app/web/cpresources && ln -s /app/storage/cpresources /app/web/cpresources
 
@@ -27,3 +27,5 @@ ENV CRAFT_DB_USER=lagoon
 ENV CRAFT_DB_PASSWORD=lagoon
 ENV CRAFT_DB_SCHEMA=public
 ENV CRAFT_DB_TABLE_PREFIX=
+
+RUN echo source /lagoon/entrypoints/99-craft-entrypoint.sh >> /home/.bashrc

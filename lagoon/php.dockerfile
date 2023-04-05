@@ -4,7 +4,7 @@ FROM ${CLI_IMAGE} as cli
 FROM uselagoon/php-8.2-fpm:latest
 
 # Craft Entrypoint for required variables
-COPY /lagoon/craft-entry.sh /lagoon/entrypoints/99-craft-entrypoint
+COPY /lagoon/craft-entry.sh /lagoon/entrypoints/99-craft-entrypoint.sh
 
 COPY --from=cli /app /app
 
@@ -21,3 +21,5 @@ ENV CRAFT_DB_USER=lagoon
 ENV CRAFT_DB_PASSWORD=lagoon
 ENV CRAFT_DB_SCHEMA=public
 ENV CRAFT_DB_TABLE_PREFIX=
+
+RUN echo source /lagoon/entrypoints/99-craft-entrypoint.sh >> /home/.bashrc

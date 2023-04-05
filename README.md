@@ -13,9 +13,17 @@ We assume you have Pygmy running locally - see https://github.com/pygmystack/pyg
 - docker-compose build
 - docker-compose run cli bash
 
-In the container running BASH
+_In the container running BASH_
 - composer install
+
+_To setup a new DB and Craft (run in the container)_
 - ./craft install (if this is a new installation, not copying an existing DB or something)
+
+_To copy the DB and files from the demo project in lagoon (run in the container)_
+- lagoon-sync sync mariadb -e main
+- lagoon-sync sync files -e main
+
+_Exist the container_
 - exit (to log out of the container)
 
 Start up the containers locally

@@ -13,6 +13,7 @@ We assume you have Pygmy running locally - see https://github.com/pygmystack/pyg
 
 In the container running BASH
 - composer install
+- ./craft install (if this is a new installation, not copying an existing DB or something)
 - exit (to log out of the container)
 
 Locally again

@@ -44,7 +44,7 @@ fi
 echo CRAFT_DB_PASSWORD: $CRAFT_DB_PASSWORD
 
 # General settings (see config/general.php)
-if [ "$LAGOON_ENVIRONMENT_TYP" == "production" ]; then
+if [ "$LAGOON_ENVIRONMENT_TYPE" == "production" ]; then
 	export DEV_MODE=false
 	export ALLOW_ADMIN_CHANGES=false
 	export DISALLOW_ROBOTS=false
@@ -61,7 +61,10 @@ echo ALLOW_ADMIN_CHANGES: $ALLOW_ADMIN_CHANGES
 if [ ! -d "/app/storage/cpresources" ]; then
 	echo Creating /app/storage/cpresources
 	mkdir /app/storage/cpresources
-	chmod 777 /app/storage/cpresources
+	chmod -R 777 /app/storage
+	chmod -R 777 /app/web/cpresources
 else
 	echo Found /app/storage/cpresources
+	chmod 777 /app/storage
+	chmod 777 /app/web/cpresources
 fi

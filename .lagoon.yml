@@ -11,4 +11,4 @@ lagoon-sync:
       database: "${MARIADB_DATABASE:-drupal}"
   files:
     config:
-      sync-directory: "/app/storage/"
+      sync-directory: "/app/storage/cpresources"

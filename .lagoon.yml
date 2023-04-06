@@ -5,10 +5,10 @@ lagoon-sync:
   mariadb:
     config:
       hostname: "${MARIADB_HOST:-mariadb}"
-      username: "${MARIADB_USERNAME:-drupal}"
-      password: "${MARIADB_PASSWORD:-drupal}"
+      username: "${MARIADB_USERNAME:-lagoon}"
+      password: "${MARIADB_PASSWORD:-lagoon}"
       port: "${MARIADB_PORT:-3306}"
-      database: "${MARIADB_DATABASE:-drupal}"
+      database: "${MARIADB_DATABASE:-lagoon}"
   files:
     config:
       sync-directory: "/app/storage/cpresources"

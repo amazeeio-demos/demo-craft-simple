@@ -40,4 +40,6 @@ Locally now
 - browse to http://demo-craft-simple.docker.amazee.io
 
 ## Deploy to Lagoon
--- TODO 
+Demo project lives at https://dashboard.amazeeio.cloud/projects/demo-craft-simple
+
+The production URL is: https://nginx.main.demo-craft-simple.us2.amazee.io/
